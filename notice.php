@@ -1,3 +1,23 @@
+<?php
+if (isset($_GET['download']) && !empty($_GET['download'])) {
+    $filename = $_GET['download'];
+    $file_path = __DIR__ . '/attachments/' . $filename;
+    
+    if (file_exists($file_path)) {
+        $file_size = filesize($file_path);
+        
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Content-Length: ' . $file_size);
+        
+        readfile($file_path);
+        exit();
+    } else {
+        http_response_code(404);
+        die('파일을 찾을 수 없습니다.');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -116,15 +136,5 @@
         </div>
     </footer>
 
-    <style>
-        .important-notice {
-            border-left-color: #e74c3c !important;
-            background: linear-gradient(90deg, #fff5f5 0%, #ffffff 100%);
-        }
-        
-        .important-notice .card-title {
-            color: #e74c3c !important;
-        }
-    </style>
 </body>
 </html>

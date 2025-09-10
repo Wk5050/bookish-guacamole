@@ -47,7 +47,7 @@
                         [
                             'title' => '신규 고객 웰컴 이벤트',
                             'period' => '2025.09.01 ~ 2025.10.29',
-                            'content' => '신규 가입 고객 대상 특별 금리 제공 + 상품권 증정',
+                            'content' => '신규 가입 고객 대상 특별 금리 제공',
                             'icon' => '🎉',
                             'benefit' => '최대 50만원 상품권',
                             'status' => 'hot'
@@ -143,16 +143,16 @@
 
             <div class="content-section">
                 <h2>이벤트 참여 안내</h2>
-                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1rem;">
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1rem; padding-bottom: 0.5rem;">
                     <h3 style="color: #1e3c72; margin-bottom: 1rem;">이벤트 참여 방법</h3>
-                    <ul style="line-height: 1.8; color: #555;">
+                    <ul style="line-height: 1.8; color: #555; padding-left: 2rem;">
                         <li><strong>온라인:</strong> 인터넷뱅킹 또는 모바일뱅킹에서 이벤트 배너 클릭</li>
                         <li><strong>오프라인:</strong> 전국 FS은행 영업점 방문 후 직원에게 이벤트 참여 의사 전달</li>
                         <li><strong>전화:</strong> 고객센터(0000-0000)를 통한 전화 신청</li>
                     </ul>
                     
                     <h3 style="color: #1e3c72; margin: 2rem 0 1rem 0;">유의사항</h3>
-                    <ul style="line-height: 1.8; color: #555;">
+                    <ul style="line-height: 1.8; color: #555; padding-left: 2rem;">
                         <li>이벤트별 참여 조건이 다를 수 있으니 자세한 내용을 확인해주세요</li>
                         <li>중복 참여가 제한되는 이벤트가 있습니다</li>
                         <li>당첨자 발표는 이벤트 종료 후 7일 이내에 개별 안내드립니다</li>
@@ -173,71 +173,5 @@
         </div>
     </footer>
 
-    <style>
-        .event-card {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .event-status {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            color: white;
-        }
-        
-        .event-hot .event-status {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            animation: pulse 2s infinite;
-        }
-        
-        .event-new .event-status {
-            background: linear-gradient(45deg, #00d2ff, #0099cc);
-        }
-        
-        .event-limited .event-status {
-            background: linear-gradient(45deg, #f39c12, #e67e22);
-        }
-        
-        .event-ongoing .event-status {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-        }
-        
-        .event-period {
-            color: #666;
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
-            font-weight: 500;
-        }
-        
-        .event-benefit {
-            background: linear-gradient(45deg, #2a5298, #1e3c72);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            margin-top: 1rem;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        
-        .ended-event {
-            opacity: 0.8;
-            border-left-color: #95a5a6 !important;
-        }
-        
-        .ended-event .card-title {
-            color: #7f8c8d !important;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-    </style>
 </body>
 </html>
